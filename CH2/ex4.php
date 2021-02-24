@@ -10,4 +10,6 @@ if ($t > "4" && $t < "12") {
 } else {
     echo "Bonne nuit !";
 }
+
+echo $t;
 ?> 
