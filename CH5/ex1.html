@@ -1,0 +1,63 @@
+<html lang="fr">
+
+<head>
+    <title>Ex 1</title>
+    <link rel="stylesheet" href="tablestyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<input type="text" id="groupe" placeholder="Groupe...">
+<button>horaire</button>
+<table id="horaire">
+    <tr>
+        <th></th>
+        <th>Lundi</th>
+        <th>Mardi</th>
+        <th>Mercredi</th>
+        <th>Jeudi</th>
+        <th>Vendredi</th>
+    </tr>
+    <tr id="0">
+        <td>8h15-9h15</td>
+    </tr>
+    <tr id="1">
+        <td>9h15-10h15</td>
+    </tr>
+    <tr id="2">
+        <td>10h30-11h30</td>
+    </tr>
+    <tr id="3">
+        <td>11h30-12h30</td>
+    </tr>
+    <tr id="4">
+        <td>13h45-14h45</td>
+    </tr>
+    <tr id="5">
+        <td>14h45-15h45</td>
+    </tr>
+    <tr id="6">
+        <td>16h-17h</td>
+    </tr>
+    <tr id="7">
+        <td>17h-18h</td>
+    </tr>
+</table>
+
+<script>
+    $(document).ready(function () {
+        $("button").click(function () {
+            let groupe = $("#groupe").val();
+            $.get("data.php?groupe=" + groupe, function (jsData, status) {
+
+                let horaire = JSON.parse(jsData);
+                console.log(horaire);
+                for (i = 0; i < 8; i++) {
+                    for (j = 0; j < horaire[i].length; j++) {
+                        $(`#${i}`).append("<td>" + horaire[i][j] + "</td>");
+                    }
+                }
+            });
+        });
+    });
+</script>
+
+</html>

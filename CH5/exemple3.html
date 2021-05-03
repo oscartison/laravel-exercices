@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <title>Exemple 1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<input type="text" id="ue" placeholder="UE">
+<button>Détail</button>
+<div id="answer"></div>
+<script>
+    $(document).ready(function () {
+        $("button").click(function () {
+            let ue = $("#ue").val();
+            $.get("hello3.php?ue=" + ue, function (data, status) {
+                $("#answer").html(data);
+            });
+        });
+    });
+</script>
+
+</html>

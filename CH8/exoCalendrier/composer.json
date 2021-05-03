@@ -1,0 +1,11 @@
+{
+    "name": "exocalendar/exocalendar",
+    "description": "",
+
+     "autoload": {
+     "psr-4": { "G55315\\": "MesClasses" }
+     },
+     "require": {
+          "phpunit/phpunit": "^9.5"
+     }
+}

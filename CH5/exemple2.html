@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <title>Exemple 1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<input type="text" id="name">
+<button>Envoyer</button>
+<p id="answer"></p>
+<script>
+    $(document).ready(function () {
+        $("button").click(function () {
+            let nameContent = $("#nameField").val();
+            $.post("hello2.php", { name: nameContent }, function (data, status) {
+                $("#answer").text(data);
+            });
+        });
+    });
+</script>
+
+</html>

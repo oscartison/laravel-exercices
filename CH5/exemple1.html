@@ -1,0 +1,20 @@
+<html lang='fr'>
+
+<head>
+    <title>Exemple 1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<button>Serveur es-tu la ?</button>
+<p id="answer"></p>
+<script>
+    $(document).ready(function () {
+        $("button").click(function () {
+            $.get("hello.php", function (data, status) {
+                $("#answer").text(data);
+            });
+        });
+    });
+</script>
+
+</html>
