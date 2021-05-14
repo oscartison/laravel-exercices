@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use \App\Http\Controllers\HelloCtrl;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,9 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/hello/{name}',[HelloCtrl::class, 'index']);
-
-
-Route::get('/todos',[\App\Http\Controllers\TodoController::class, 'index' ]);
-
-Route::get('/todos/{id}',[\App\Http\Controllers\TodoController::class, 'show' ]);
+//Route::get('/api/tasks/{id?}', [ RestTasksController::class, 'tasks' ]);
