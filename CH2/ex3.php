@@ -1,6 +1,6 @@
 <?php
 function countCalls () {
-    static $x = 0;
+    static $x;
     $x = $x + 1;
     echo $x . "<br>\n";
 }

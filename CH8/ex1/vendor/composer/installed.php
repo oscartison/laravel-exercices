@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '0867edd3aacb52ea2d740ca6f3ad0216bdf00a23',
+    'reference' => '185b5dceb9f230e1aabb2bfa11d9745f264d9154',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '0867edd3aacb52ea2d740ca6f3ad0216bdf00a23',
+      'reference' => '185b5dceb9f230e1aabb2bfa11d9745f264d9154',
     ),
     'symfony/polyfill-mbstring' => 
     array (
@@ -40,12 +40,12 @@
     ),
     'symfony/var-dumper' => 
     array (
-      'pretty_version' => 'v5.2.6',
-      'version' => '5.2.6.0',
+      'pretty_version' => 'v5.2.8',
+      'version' => '5.2.8.0',
       'aliases' => 
       array (
       ),
-      'reference' => '89412a68ea2e675b4e44f260a5666729f77f668e',
+      'reference' => 'd693200a73fae179d27f8f1b16b4faf3e8569eba',
     ),
   ),
 );

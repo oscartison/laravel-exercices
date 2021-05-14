@@ -1,6 +1,6 @@
 <?php
 
-var_dump($_REQUEST);
-foreach ($_GET['cars'] as $car ){
+var_dump($_POST);
+foreach ($_POST['cars'] as $car ){
     echo $car;
 }

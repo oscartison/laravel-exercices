@@ -1,3 +1,3 @@
 <?php
-$userName = $_POST["name"];
+$userName = $_POST["nameA"];
 echo "Bonjour $userName !";

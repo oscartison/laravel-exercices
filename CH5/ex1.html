@@ -47,9 +47,8 @@
         $("button").click(function () {
             let groupe = $("#groupe").val();
             $.get("data.php?groupe=" + groupe, function (jsData, status) {
-
                 let horaire = JSON.parse(jsData);
-                console.log(horaire);
+                console.log(jsData);
                 for (i = 0; i < 8; i++) {
                     for (j = 0; j < horaire[i].length; j++) {
                         $(`#${i}`).append("<td>" + horaire[i][j] + "</td>");

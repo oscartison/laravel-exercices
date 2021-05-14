@@ -10,8 +10,8 @@
 <script>
     $(document).ready(function () {
         $("button").click(function () {
-            let nameContent = $("#nameField").val();
-            $.post("hello2.php", { name: nameContent }, function (data, status) {
+            let nameContent = $("#name").val();
+            $.post("hello2.php", { nameA: nameContent }, function (data, status) {
                 $("#answer").text(data);
             });
         });
