@@ -1,5 +1,15 @@
 @extends('canevas')
 @section('content')
+<style>
+  p {
+    color: red;
+    margin: 5px;
+    cursor: pointer;
+  }
+  p:hover {
+    background: yellow;
+  }
+  </style>
 <label for="pet-select">Choose a student:</label>
 
 <select name="course" id="course-select" method="get">
@@ -8,21 +18,9 @@
     @endforeach
 </select>
 <div id="msg"></div>
-<script>
-    $(document).ready(function() {
-        $("#course-select").change(function() {
-            $("#msg").empty();
-            $value = $("#course-select").val();
-            $.get("pae/students/" + $value, function(jsData, status) {
-                let pae = jsData["pae"];
-                for (i = 0; i < pae.length; i++) {
-                        $("#msg").append("<p>" + "name: " + pae[i]["name"]+" lib: " + pae[i]["lib"] +" credits: " +  pae[i]["credits"] + "</p>");
-                    }
-            });
-        });
-    });
-</script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="{{ asset('js/index.js') }}"></script>
 
 
 
