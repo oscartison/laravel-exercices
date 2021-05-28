@@ -24,3 +24,5 @@ Route::get('/pae/students', [ StudentController::class, 'tasks' ]);
 
 
 Route::get('/pae/students/{id}', [ StudentController::class, 'tasks' ]);
+
+Route::post('/pae/students/delete/{id}/{course}', [ StudentController::class, 'delete' ]);

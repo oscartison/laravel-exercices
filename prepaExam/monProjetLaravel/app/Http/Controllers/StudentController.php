@@ -20,4 +20,8 @@ class StudentController extends Controller
         $students = Student::SelectAll();
         return view('index', compact('students'));
     } 
+
+    public function delete($id,$course) {
+        return Student::delete($id,$course);
+    }
 }

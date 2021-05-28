@@ -2,8 +2,10 @@
 <html lang="fr">
 <head>
 <title>@yield('title')</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<meta name="csrf-token" content="{{ csrf_token() }}" />
 </head>
 <body>
 <main>

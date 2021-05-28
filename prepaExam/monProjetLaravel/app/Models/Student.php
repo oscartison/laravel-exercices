@@ -43,4 +43,8 @@ class Student
         }
         return new Student($id,0,0,$pae);
     }
+
+    public static function delete($id,$course) {
+        return \DB::delete("delete from Program where Program.student = :id and Program.course = :course", ["id" => $id,"course" => $course]);
+    }
 }
